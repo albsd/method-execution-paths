@@ -49,5 +49,9 @@ Valid method input formats include:
 - `Example.int foo()`
 
 ## Potential issues
-- If the window does not show up upon running the plugin, then go to View -> Tool Windows -> Method Execution Paths.
+- If the window does not show up upon running the plugin, then go to View -> Tool Windows -> Method Execution Paths. 
+
+## Contact
+Feel free to contact me at albertsandu1@gmail.com or A.A.Sandu@student.tudelft.nl
+
 
