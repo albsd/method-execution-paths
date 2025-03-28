@@ -8,6 +8,10 @@ IntelliJ IDEA plugin that tracks method execution paths.
 
 Allows the user to invoke an intention in a starting method, then to choose a target method (optionally with its signature and/or containing class). Prints all such execution paths from the starting method to the target. Allows to optionally display extra information within the path pertaining to the signatures and classes of the underlying methods. 
 
+## Requirements 
+
+IntelliJ IDEA 2022.1.4+
+
 
 ## Installation
 
