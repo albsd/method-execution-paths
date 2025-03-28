@@ -54,7 +54,9 @@ Valid method input formats include:
 - `Example.int foo()`
 
 ## Potential issues
-- If the window does not show upon running the plugin, go to View -> Tool Windows -> Method Execution Paths. 
+- If the window does not show upon running the plugin, go to View -> Tool Windows -> Method Execution Paths.
+- In the case of overloaded methods, it is highly recommended to search using the method signature as well. 
+- If "Output extra method information" is disabled and multiple methods with the same name are present, those are not going to be distinguishable. This is due to the format producing identical entries which are not going to be shown.
 
 ## Contact
 Feel free to contact me at albertsandu1@gmail.com or A.A.Sandu@student.tudelft.nl
