@@ -17,7 +17,7 @@ start -> a -> b_2 -> d -> target
 It is essential that the plugin doesn't "avoid" checking c() and d() multiple times
 as they may be part of different execution paths. Keep in mind lambda() technically
 results in infinite recursion but in the context of static analysis it still presents
-a valid execution path towards target().
+an execution path towards target().
  */
 
 class BlockDepth {

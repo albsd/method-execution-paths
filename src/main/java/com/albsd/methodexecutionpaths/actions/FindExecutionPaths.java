@@ -251,12 +251,25 @@ public class FindExecutionPaths implements IntentionAction {
 
     }
 
+
+    /*
+        This is the "bulk" of the plugin. Takes as input the method on which we invoked the intention
+        and the constraints to search from the target method.
+
+        Returns a set of strings in readable format. Each of those represents an
+        execution path from the starting method to the target method.
+
+        Practically a DFS on the methods within the body of the starting method.
+    */
     public Set<String> findExecutionPaths(PsiMethod startingMethod, String targetMethodName, String targetClassName, MethodPath currentPath, String[] params) {
         PsiCodeBlock methodBody = startingMethod.getBody();
         if (methodBody == null) return Set.of();
 
         Set<String> result = new HashSet<>();
 
+        /*  Recurse through the body of the method to find all methods within it .
+            Consider that a method may be lying underneath a conditional statement and so forth.
+        */
         PsiTreeUtil.processElements(methodBody, element -> {
             if (element instanceof PsiMethodCallExpression methodCall) {
                 PsiReferenceExpression methodExpression = methodCall.getMethodExpression();
@@ -291,7 +304,8 @@ public class FindExecutionPaths implements IntentionAction {
                         copying it is necessary to address both cases of recursion / cycles and paths "intersecting"
                         in a specific method.
 
-                        Refer to BlockDepth.java in src/test/testData for an actual example.
+                        Refer to BlockDepth.java in src/test/testData for an actual example. Further explanations
+                        can be found in FindExecutionPathsTest under src/test/java/com/albsd/methodexecutionpaths/actions
                      */
                     MethodPath newPath = new MethodPath(currentPath);
                     if (OUTPUT_FULL_PATH) {
@@ -301,7 +315,11 @@ public class FindExecutionPaths implements IntentionAction {
                     }
 
 
-                    // Keep track of visited through methodIdentifier (signature, name, class)
+                    /*  Keep track of visited through methodIdentifier (signature, name, class)
+                        Initially just methodName was used and iteratively more "conditions" were added
+                        necessitating a String or some sort of encoding of the method.
+                        At this point though, it might be more useful to use PsiMethod instead.
+                    */
                     if (methodName.equals(targetMethodName) && classCondition && signatureCondition && returnCondition ) {
                         result.add(newPath.pathString);
                     } else if (newPath.methodSet.add(methodIdentifier)) {

@@ -78,11 +78,11 @@ public class FindExecutionPathsTest extends LightJavaCodeInsightFixtureTestCase 
         /*
             For instance, a different execution path resulting from the program would be:
             recursiveA -> recursiveA -> recursiveB
-            This should NOT be shown as it's already included within recursiveA -> recursiveB
+            This should NOT be shown as it's already included within recursiveA -> recursiveB.
 
             On the other hand (as long as it is its own target),
             recursiveA -> recursiveA
-            is fine, as it shows that the function is recursive
+            is fine, as it shows that the function is recursive.
         */
         String expectedOutputOne = "recursiveA -> recursiveB\n";
         testFindExecutionPaths(fileName, "recursiveA", "recursiveB", expectedOutputOne, showClasses);
