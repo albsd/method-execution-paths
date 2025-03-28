@@ -32,7 +32,10 @@ public class CustomToolWindowFactory implements ToolWindowFactory {
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         JPanel panel = new JPanel();
-        panel.add(new JLabel("Select the method from which you want to start.\nPress Alt + Enter (or Option + Enter or  Right Click + Show Context Actions) then select \"Track execution paths\".\n" + EXAMPLE_STR));
+        panel.add(new JLabel("<html>Select the method from which you want to start.<br>"
+                + "Press Alt + Enter (or Option + Enter or Right Click + Show Context Actions)"
+                + "then select \"Track execution paths\".<br>"
+                + EXAMPLE_STR + "</html>"));
 
         ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
         Content content = contentFactory.createContent(panel, "", false);

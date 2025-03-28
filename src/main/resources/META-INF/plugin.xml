@@ -5,7 +5,7 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Method-Execution-Paths</name>
+    <name>Method Execution Paths</name>
 
     <depends>com.intellij.java</depends>
     <depends>com.intellij.modules.platform</depends>
@@ -18,27 +18,29 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description>
         <![CDATA[
-      Intention action that finds the execution paths resulting in the call of a method, given a starting one.
+        <html>
+        <p>Intention action that finds the execution paths resulting in the call of a method, given a starting one.</p>
 
-      Displays the execution paths, including the signatures and classes of the methods involved.
-      To use, right-click on the starting method (alternatively Alt-Enter or Option-Enter), choose "Show Context Options", then enter the name (and optionally the signature and class) of the target method.
+        <p>Displays the execution paths, including the signatures and classes of the methods involved.<br>
+        To use, right-click on the starting method (alternatively <b>Alt-Enter</b> or <b>Option-Enter</b>),<br>
+        choose "<b>Show Context Options</b>", then enter the name (and optionally the signature and class)
+        of the target method.</p>
 
-      Format of the type Class.type foo(type, type ...).
+        <p>Format of the type: <code>Class.type foo(type, type ...)</code>.</p>
 
-      Examples:
+        <p><b>Examples:</b></p>
 
-      foo();
+        <ul>
+            <li><code>foo();</code></li>
+            <li><code>void foo();</code></li>
+            <li><code>void foo(int, String);</code></li>
+            <li><code>MyClass.foo;</code></li>
+            <li><code>MyClass.foo(),</code></li>
+            <li><code>MyClass.void foo()</code></li>
+        </ul>
 
-      void foo();
-
-      void foo(int, String);
-
-      MyClass.foo;
-
-      MyClass.foo(),
-
-      MyClass.void foo()
-    ]]>
+        </html>
+        ]]>
     </description>
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
