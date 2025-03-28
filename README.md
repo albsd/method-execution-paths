@@ -33,11 +33,12 @@ Finally, load the plugin into IntelliJ via **File > Settings > Plugins > Install
 ## Usage
 
 1. Open a Java file in IntelliJ IDEA.
-2. Place the cursor inside a method you want to analyze.
-3. Open the **Intentions / Show Context Actions** menu (`Alt + Enter` or `⌥ + Enter` on macOS).
-4. Select **Track method execution paths**.
-5. Enter the method signature in the prompt (e.g., `Example.foo(int, String)`).
-6. (Optional) Uncheck the "Output extra method information" box for a "simpler" output.
+2. If the Method Execution Paths window isn't present in the bottom part of the editor, go to View -> Tool Windows -> Method Execution Paths
+3. Place the cursor inside a method you want to analyze.
+4. Open the **Intentions / Show Context Actions** menu (`Alt + Enter` or `⌥ + Enter` on macOS).
+5. Select **Track method execution paths**.
+6. Enter the method signature in the prompt (e.g., `Example.foo(int, String)`).
+7. (Optional) Uncheck the "Output extra method information" box for a "simpler" output.
 6. View execution paths in the **Method Execution Paths** window.
 
 ## Input Format Examples
