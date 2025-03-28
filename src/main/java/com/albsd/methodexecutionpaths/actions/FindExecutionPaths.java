@@ -72,7 +72,7 @@ public class FindExecutionPaths implements IntentionAction {
     public String[] targetParams = new String[0];
 
 
-    // TODO: Error messages, tests, class-mode
+    // TODO: Implement optional log
 
     public void setOutputPathMode(boolean b) {
         OUTPUT_FULL_PATH = b;

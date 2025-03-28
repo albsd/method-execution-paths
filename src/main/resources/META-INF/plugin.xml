@@ -21,10 +21,23 @@
       Intention action that finds the execution paths resulting in the call of a method, given a starting one.
 
       Displays the execution paths, including the signatures and classes of the methods involved.
-      To use, right-click on the starting method (alternatively Alt-Enter), choose "Show Context Options", then enter the name (and optionally the signature and class) of the target method.
+      To use, right-click on the starting method (alternatively Alt-Enter or Option-Enter), choose "Show Context Options", then enter the name (and optionally the signature and class) of the target method.
 
       Format of the type Class.type foo(type, type ...).
-      Examples: foo(); void foo(); void foo(int, String); MyClass.foo; MyClass.foo(), MyClass.void foo()
+
+      Examples:
+
+      foo();
+
+      void foo();
+
+      void foo(int, String);
+
+      MyClass.foo;
+
+      MyClass.foo(),
+
+      MyClass.void foo()
     ]]>
     </description>
     <!-- Product and plugin compatibility requirements.
