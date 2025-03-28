@@ -11,7 +11,7 @@ Allows the user to invoke an intention in a starting method, then to choose a ta
 
 ## Installation
 
-You can download the plugin from the [Releases](https://github.com/yourusername/method-execution-paths/releases) section.
+You can download the plugin from the [Releases](https://github.com/albsd/method-execution-paths/releases) section.
 Alternatively, you can follow these instructions:
 
 1. Clone this repository:
