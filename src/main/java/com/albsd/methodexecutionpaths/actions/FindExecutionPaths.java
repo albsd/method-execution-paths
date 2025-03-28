@@ -22,7 +22,7 @@ public class FindExecutionPaths implements IntentionAction {
     @NotNull
     @Override
     public String getText() {
-        return "Track method usages and execution paths";
+        return "Track method execution paths";
     }
 
     @NotNull
@@ -120,6 +120,7 @@ public class FindExecutionPaths implements IntentionAction {
 
             if (paramList.isEmpty()) {
                 paramTypes = new String[0];
+                this.MATCH_PARAMETERS = true;
             } else {
                 this.MATCH_PARAMETERS = true;
                 paramTypes = paramList.split("\\s*,\\s*");
