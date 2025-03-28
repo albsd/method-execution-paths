@@ -56,10 +56,12 @@ public class FindExecutionPaths implements IntentionAction {
             Example.int foo()
             """;
 
+    // development purposes only
     public String log = "LOG:\n";
 
     private boolean OUTPUT_FULL_PATH = false;
 
+    // development purposes only
     private boolean LOG_OUTPUT = false;
 
     private boolean MATCH_PARAMETERS = false;
@@ -71,8 +73,6 @@ public class FindExecutionPaths implements IntentionAction {
     public String targetReturnType = "";
     public String[] targetParams = new String[0];
 
-
-    // TODO: Implement optional log
 
     public void setOutputPathMode(boolean b) {
         OUTPUT_FULL_PATH = b;
