@@ -214,7 +214,7 @@ public class FindExecutionPaths implements IntentionAction {
             return;
         }
 
-        String infoMessage = getInfoMessage(this.targetMethodName, startingMethodIdentifier);
+        String infoMessage = getInfoMessage(inputString, startingMethodIdentifier);
         String pathsMessage = pathsToString(paths);
 
         if (pathsMessage.equals(ERR_STR)) {
