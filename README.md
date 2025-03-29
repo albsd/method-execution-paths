@@ -26,10 +26,9 @@ Alternatively, you can follow these instructions:
 2. Open the project in **IntelliJ IDEA**.
 
 3. Build and install the plugin locally using Gradle:
-    ```sh
-    ./gradlew build
-    ```
-4. Take the generated .zip file from ```test/distributions```.
+    - Go to **Gradle > method-execution-paths > Tasks > intellij > buildPlugin** 
+    - Or run ```./gradlew build```.
+5. Take the generated .zip file from ```build/distributions```.
 
 
 Finally, load the plugin into IntelliJ via **File > Settings > Plugins > Install Plugin from Disk**.
@@ -62,6 +61,7 @@ Valid method input formats include:
 - If the window does not show upon running the plugin, go to View -> Tool Windows -> Method Execution Paths.
 - In the case of overloaded methods, it is highly recommended to search using the method signature as well. 
 - If "Output extra method information" is disabled and multiple methods with the same name are present, those are not going to be distinguishable. This is due to the format producing identical entries which are not going to be shown.
+- (LINUX) If confronted with the error ```java.lang.IllegalStateException: Current thread: Thread[AWT-EventQueue-1,6,main]; expected: Thread[AWT-EventQueue-0,6,]``` when trying to build the plugin, simply retry the buildPlugin task. If still unsuccesful, try **build -> clean** and **intellij -> buildPlugin**. In case the issue persists, modify the version of IntelliJ in ```build.gradle.kts``` to "2024.3.5" and make sure IntelliJ is updated. 
 
 ## Contact
 Feel free to contact me at albertsandu1@gmail.com or A.A.Sandu@student.tudelft.nl
